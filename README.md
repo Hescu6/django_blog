@@ -1,6 +1,6 @@
 # Django practice blog
 
-Tutorial by Corey Schafer https://coreyms.com/category/development/python
+Tutorial by Corey Schafer https://coreyms.com/development/python/python-django-tutorials-full-series
 
 Learning the Python Django framework by following a tutorial for a blog with user registration.
 
