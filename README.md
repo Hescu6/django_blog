@@ -1,14 +1,44 @@
-# Django practice blog
+# Django Blog
 
-Learning Python Django framework - blog app
+Learning Django framework - blog app
 
-Tutorial by Corey Schafer https://coreyms.com/development/python/python-django-tutorials-full-series
 
-# Commands
+# Script Commands
 
--**python manage.py runserver** to run server, port 8000 default\
--**python manage.py startapp sampleApp** for a new app\
--**python manage.py shell** for a shell, one way to manage \models
--**python manage.py makemigrations** initiate db migration\
--**python manage.py migrate** db migration\
 
+**Install All Dependencies**
+
+    pip install requirements.txt
+
+**run server, port 8000 default** 
+
+    python manage.py runserver
+
+**------------------------------------**
+
+
+**Create a New app** 
+
+    python manage.py startapp sampleApp
+
+**Open a DJango shell to manage \models** 
+
+    python manage.py shell
+
+**initiate db migration** 
+
+    python manage.py makemigrations
+
+**Migrate DB**
+
+    python manage.py migrate
+
+**-------------------------------**
+
+**Get requirements from current project scope**
+
+    pip freeze > requirements.txt
+
+**Upgrade requirements**
+
+    pip install --upgrade -r requirements.txt
