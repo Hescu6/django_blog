@@ -13,8 +13,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import json
 
-with open('/etc/config.json') as config_file:
-        config = json.load(config_file)
+#uncomment to use config.json file
+# with open('/etc/config.json') as config_file:
+#         config = json.load(config_file)
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -25,15 +26,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config.get('SECRET_KEY')
-
+#SECRET_KEY = config.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config.get('DEBUG')
+#DEBUG = config.get('DEBUG')
+DEBUG = os.environ.get('DEBUG')
 
 #array
-ALLOWED_HOSTS = config.get('PUBLIC_IP')
-
+# ALLOWED_HOSTS = config.get('PUBLIC_IP')
+ALLOWED_HOSTS = os.environ.get('PUBLIC_IP')
 
 # Application definition
 
@@ -144,13 +146,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-#EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
-#EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
-EMAIL_HOST_USER = config.get('EMAIL_USER')
-EMAIL_HOST_PASSWORD = config.get('EMAIL_PASS')
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
+# EMAIL_HOST_USER = config.get('EMAIL_USER')
+# EMAIL_HOST_PASSWORD = config.get('EMAIL_PASS')
 
-#EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
-#EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
 #Secrets & django-storages settings for AWS S3 buckets
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
