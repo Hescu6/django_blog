@@ -89,22 +89,24 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config.get('AWS_DB_NAME'),
-        'USER': config.get('AWS_DB_USER'),
-        'PASSWORD': config.get('DB_PASS'),
-        'HOST': config.get('AWS_DB_HOST'),
-        'PORT': config.get('AWS_DB_PORT')
+        'NAME': os.environ.get('AWS_DB_NAME'),
+        'USER': os.environ.get('AWS_DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST': os.environ.get('AWS_DB_HOST'),
+        'PORT': os.environ.get('AWS_DB_PORT')
 
     }
 }
 
 
+#SQLite used for local DEVELOPMENT
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
 
 
 
