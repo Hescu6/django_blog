@@ -1,5 +1,45 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-        <p>About Page</p>
+      
+
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+                
+          
+                <main role="main" class="inner cover">
+                  <h2 class="cover-heading">About this Blog</h2>
+                  <p class="lead">This blog was created with the means to practice and experience the Django
+                        framework and all its capabilities. The model, view, controller (MVC or MTV in Django) 
+                        facilitates the organization and planning of structures. The Object-relational-Mapper (ORM) 
+                        included in the framework makes a layer of abstraction in defining and initializing a database.</p>
+                  <p class="lead">
+                    <a href="https://docs.djangoproject.com/en/3.2/" class="btn btn-lg btn-secondary">Learn more about Django</a>
+                  </p>
+                </main>
+
+                <header class="masthead mb-auto">
+                        <div class="inner">
+                          <h2 class="masthead-brand">About Me</h2>
+                          <p class="lead">
+                                My name is Hildebrando Escudero and I'm a Software Developer in the DMV area (Washington DC). Take a
+                                 my profile, Github, or LinkedIn handles below.
+
+                          </p>
+                          <p class="lead">
+                          <nav class="nav nav-masthead justify-content-center">
+                                <p class="lead" style="width: 100px">
+                                        <a href="https://hescu6.github.io/portfolio/" class="btn btn-sm btn-secondary">Portfolio</a> 
+                                      </p>
+                                      <p class="lead" style="width: 100px">
+                                        <a href="https://github.com/Hescu6" class="btn btn-sm btn-secondary">Github</a> 
+                                      </p>
+                                      <p class="lead" style="width: 100px">
+                                        <a href="https://www.linkedin.com/in/hiescudero/" class="btn btn-sm btn-secondary">LinkedIn</a> 
+                                      </p>
+                          </nav>
+                        </div>
+                      </header>
+          
+             
+              </div>
 {% endblock content %}
