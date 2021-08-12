@@ -1,6 +1,7 @@
 # Django Blog
 
-Learning Django framework - blog app
+**Learning Django framework - blog app**
+Scalable blog made with the Django Framework. Deployed to an Apache server in an EC2 instance. An S3 bucket is used to store images and AWS RDS is used to store content.
 
 
 # Script Commands
